@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>StockPe | Home</title>
+    <link rel="icon" type="image/png" href="./img/fav.png">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    
+
+    <script src="index.js"></script>
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("July 21, 2021 00:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h " +
+                minutes + "m " + seconds + "s ";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+
+    <div>
+        <section class="home">
+            <div class="logo">
+                <img src="./img/StockPe.png" alt="Stockpe" class="stockpe_logo">
+            </div>
+            <div class="section">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="section1 col-lg-6">
+                            <div id="carouselExampleIndicators" class="carousel slide  " data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="carousel-item active">
+                                        <h2>Open a Stock<span>Pe</span> Learning Account</h2>
+                                        <p>Instantly buy or sell stock token with just a click of a button.</p>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h2>Learn Stock Trading and <span>Invest</span> like a Pro</h2>
+                                        <p>Learn Stock Trading and invest simultaneously by practically learning </p>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h2>Learn and Compete with your<span>Peers</span></h2>
+                                        <p>Learn together with your peers, compete and get exciting returns</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_area" id="myDIV">
+                                <form class="d-flex" id="contactForm">
+                                    <input type="number" class="form-control number " id="inlineFormInputName2" placeholder="Phone number" pattern="[6789][0-9]{9}">
+                                    <button type="submit" class="btn btn-primary" onclick="myFunction()">Get invite</button>
+
+                                </form>
+                            </div>
+                            <div style="display: none; color: #fff;" class="form_area" id="my2">
+                                <div class="d-flex">
+                                    <p>Thank You 😁. We will notify you once your invite is ready and served hot and fresh to your sms inbox.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="svg-container col-lg-6">
+                            <img src="./img/Landing.png" alt="landing" class="landing_svg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="timer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 png_area">
+                        <img src="./img/Tournament design.png" alt="design" class="design" />
+                    </div>
+                    <div class="col-lg-6 text_area align-middle">
+                        <h1 class="align-middle">Can you predict the market?</h1>
+                        <p>Join in our tournament and compete with your friends to predict the market and win exciting
+                            prizes</p>
+                    </div>
+                    <div class="col-lg-3 btn__area">
+                        <p id="demo" class="timmer"></p>
+                        <button type="button" class="btn btn-primary btn-lg timer_btn ">Let’s Go!</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="home">
+            <img src="./img/Scores.png" alt="img1" class="score" />
+        </section>
+        <section class="mid1_section">
+            <div class="mid1">
+                <div class="headings">
+                    <h2 class="text-center">How does StockPe work?</h2>
+                </div>
+                <div class="svg_area">
+                    <div class="area ">
+                        <img src="img/Tournament.png" alt="low_png" class="svgs" />
+                        <h3 class="s_h3">Enter into tournament</h3>
+                        <p>Tournament will help you learn the basics of stock market</p>
+                    </div>
+                    <!-- <img src="img/Arrow.png" alt="low_png" class="arrow" /> -->
+                    <div class="area">
+                        <img src="img/implement.png" alt="low_png" class="svgs" />
+                        <h3 class="s_h3">Learn and implement</h3>
+                        <p>Get simplified market tips and test out your hypothesis into the game</p>
+                    </div>
+                    <!-- <img src="img/Arrow.png" alt="low_png" class="arrow" /> -->
+                    <div class="area">
+                        <img src="img/with.png" alt="low_png" class="svgs" />
+                        <h3 class="s_h3">Unbelievable returns</h3>
+                        <p class="para">win 10x 20x prize and ace the leaderboard
+                        </p>
+                    </div>
+                    <!-- <img src="img/Arrow.png" alt="low_png" class="arrow" /> -->
+                    <div class="area">
+                        <img src="img/Rewards.png" alt="low_png" class="svgs" />
+                        <h3 class="s_h3">Easy withdraw</h3>
+                        <p class="para">You can withdraw anytime or stay and learn more</p>
+                    </div>
+                </div>
+                <section class="home">
+                    <img src="./img/Po.png" alt="img1" class="score" />
+                </section>
+                <section class="mid1_section">
+                    <div class="mid1">
+                        <div class="headings">
+                            <h2 class="text-center">How we help you learn and invest</h2>
+                        </div>
+                        <div class="svg_area">
+                            <div class="area ">
+                                <img src="img/Low.png" alt="low_png" class="svgs" />
+                                <h3 class="s_h3">Low investment</h3>
+                                <p>As students invest the minimum amount and get the maximum returns</p>
+                            </div>
+                            <div class="area">
+                                <img src="img/10x.png" alt="low_png" class="svgs" />
+                                <h3 class="s_h3">10x rewards</h3>
+                                <p>Just with tiny bit of investment leading to maximum rewards</p>
+                            </div>
+                            <div class="area">
+                                <img src="img/Learn.png" alt="low_png" class="svgs" />
+                                <h3 class="s_h3">Learn & implement in real time</h3>
+                                <p class="para">Simplied market tips in a capsule form for you to learn & implement in
+                                    real time
+                                </p>
+                            </div>
+                        </div>
+                </section>
+                <section class="home">
+                    <img src="./img/Wit.png" alt="img1" class="score" />
+                </section>
+                <section class="mid1_section">
+                    <div class="mid1">
+                        <div class="headings">
+                            <h2 class="text-center">We are available 24 X 7 </h2>
+                        </div>
+                        <div class="help_svg">
+                            <img src="./img/Need.svg" alt="need_help" class="need_svg" />
+                            <img src="./img/Customer.svg" alt="customer" class="customer_svg" />
+                        </div>
+                    </div>
+                </section>
+                <footer>
+                    <div class="footer_h">
+                        <div class="header">
+                            <img src="img/StockPe.png" alt="logo" class="footer_logo" />
+                        </div>
+                        <div class="text__area">
+                            <div class="about">
+                                <h3>About</h3>
+                                <p class="footer_para">
+                                    With The Vision To Make Stock Trading Accessible To Students. We
+                                    Are Creating A New Era Of Financially Educated Students In India.
+                                </p>
+                            </div>
+                            <div class="touch">
+                                <h3>Get In Touch </h3>
+                                <p class="footer_para1">
+                                    Questions or feedbacks? We would love to hear from you
+                                </p>
+                                <div class="email_area">
+                                    <h4>Email us at</h4>
+                                    <a href="mailto:Hello@stockpe.tech" target="_blank" rel="noreferrer">
+                                        Hello@stockpe.tech
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="btn_area">
+                                <h3>Get our app</h3>
+                                <a href="#">
+                                    <img src="img/button.png" alt="btn" class="btn_svga" />
+                                </a>
+                            </div>
+                            <div class="social_media">
+                                <h3>Social media</h3>
+                                <div class="social_media_icons">
+                                    <a href="#">
+                                        <img src="img/facebook.png" alt="facebook" />
+                                    </a>
+                                    <a href="#">
+                                        <img src="img/instagram.png" alt="insta" />
+                                    </a>
+                                    <a href="#">
+                                        <img src="img/twitter.png" alt="twitter" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p1_div">
+                            <p class="p1">© 2021 StockPe All Rights Reserved.</p>
+                        </div>
+                        <div class="p2_div">
+                            <p class="p2">A platform by Indians for Indians &#10084;&#65039;</p>
+                        </div>
+                    </div>
+            </div>
+            </footer>
+
+
+
+</div>
+
+<script>
+function myFunction() {
+  document.getElementById("myDIV").style.display = "none";
+  document.getElementById("my2").style.display = "block";
+  
+}
+</script>
+    
+
+    <script src=
+"https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
+    </script>
+    
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBHImByi4CCEOewZL0NtZUeduAGlzjqjq8",
+            authDomain: "webstock-99519.firebaseapp.com",
+            databaseURL: "https://webstock-99519-default-rtdb.firebaseio.com/",
+            projectId: "webstock-99519",
+            storageBucket: "webstock-99519.appspot.com",
+            messagingSenderId: "877478933807",
+            appId: "1:877478933807:web:2bc03d8eeef37f2c1dddda"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        var messagesRef = firebase.database()
+            .ref('Collected Data');
+        
+        document.getElementById('contactForm')
+            .addEventListener('submit', submitForm);
+
+        function submitForm(e) {
+            e.preventDefault();
+
+            // Get values
+            var phone = getInputVal('inlineFormInputName2');
+
+            saveMessage(phone);
+            document.getElementById('contactForm').reset();
+        }
+
+        // Function to get get form values
+        function getInputVal(id) {
+            return document.getElementById(id).value;
+        }
+
+        // Save message to firebase
+        function saveMessage(phone) {
+            var newMessageRef = messagesRef.push();
+            newMessageRef.set({
+                phone: phone,
+               
+            });
+            
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
