@@ -116,7 +116,7 @@
                     </div>
                     <div class="col-lg-3 btn__area">
                         <p id="demo" class="timmer"></p>
-                        <button type="button" class="btn btn-primary btn-lg timer_btn ">Let’s Go!</button>
+                        <button type="button" class="btn btn-primary btn-lg timer_btn " onclick="myFunction2()">Let’s Go!</button>
                     </div>
                 </div>
             </div>
@@ -224,7 +224,7 @@
                             </div>
                             <div class="btn_area">
                                 <h3>Get our app</h3>
-                                <a href="#">
+                                <a href="#carouselExampleIndicators">
                                     <img src="img/button.png" alt="btn" class="btn_svga" />
                                 </a>
                             </div>
@@ -262,6 +262,11 @@ function myFunction() {
   document.getElementById("myDIV").style.display = "none";
   document.getElementById("my2").style.display = "block";
   
+}
+
+function myFunction2() {
+  var elmnt = document.getElementById("carouselExampleIndicators");
+  elmnt.scrollIntoView();
 }
 </script>
     
