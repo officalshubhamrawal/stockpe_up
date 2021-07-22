@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>StockPe | Home</title>
+    <link rel="icon" type="image/png" href="./img/fav.png">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <script src="index.js"></script>
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("August 1, 2021 00:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h " +
+                minutes + "m " + seconds + "s ";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+
+    <div>
+        <section class="home">
+            <div class="logo px-sm-5 px-2">
+                <nav class="navbar navbar-expand-lg navbar-light p-0">
+                    <a class="navbar-brand" href="#"><img src="./img/StockPe.png" alt="Stockpe"
+                            class="stockpe_logo mx-sm-5 mx-2"></a>
+                    <button id="nav-toggle-button" class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto mr-auto menu">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Our team</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">FAQs</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Contact us</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline px-5">
+                            <button class="btn btn-primary px-4" type="submit">Get Started</button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+            <div class="section mt-sm-5">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="section1 col-lg-6">
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="carousel-item active">
+                                        <h2>Open a Stock<span>Pe</span> Learning Account</h2>
+                                        <p>Instantly buy or sell stock token with just a click of a button.</p>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h2>Learn Stock Trading and <span>Invest</span> like a Pro</h2>
+                                        <p>Learn Stock Trading and invest simultaneously by practically learning </p>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h2>Learn and Compete with your<span> Peers</span></h2>
+                                        <p>Learn together with your peers, compete and get exciting returns</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_area" id="myDIV">
+                                <form class="d-flex" id="contactForm">
+                                    <input type="number" class="form-control number " id="inlineFormInputName2"
+                                        placeholder="Phone number" pattern="[6789][0-9]{9}" required>
+                                    <button type="submit" class="btn btn-primary" onclick="myFunction()">Get
+                                        invite</button>
+                                </form>
+                            </div>
+                                <div style="display: none; color: #fff;" class="form_area" id="my2">
+                                    <div class="d-flex">
+                                        <p>Thank You 😁. We will notify you once your invite is ready and served hot and
+                                            fresh to your sms inbox.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        <div class="svg-container col-lg-6">
+                            <img src="./img/Landing.png" alt="landing" class="landing_svg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="timer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 png_area">
+                        <img src="./img/Tournament design.png" alt="design" class="design" />
+                    </div>
+                    <div class="col-lg-6 text_area align-middle">
+                        <h1 class="align-middle">Can you predict the market?</h1>
+                        <p>Join in our tournament and compete with your friendsto learn the market basics and win exciting
+                            prizes</p>
+                    </div>
+                    <div class="col-lg-3 btn__area">
+                        <p id="demo" class="timmer"></p>
+                        <button type="button" class="btn btn-primary btn-lg timer_btn ">Let’s Go!</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="home">
+            <img src="./img/Scores.png" alt="img1" class="score" />
+        </section>
+        <section class="mid_section p-5">
+            <div class="container-fluid">
+                <h2 class="text-center mb-4 heading">How does StockPe work?</h2>
+                <div class="row text-center p-sm-5 ">
+                    <div class="col-lg-3 check">
+                        <img src="./img/Tournament.png" class="img-fluid svg" alt="Responsive image">
+                        <h3>Enter into tournament</h3>
+                        <p>Tournament will help you learn the basics of stock market</p>
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="./img/implement.png" class="img-fluid svg" alt="Responsive image">
+                        <h3>Learn and implement</h3>
+                        <p>Get simplified market insights and test out your hypothesis in real time</p>
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="./img/Rewards.png" class="img-fluid svg" alt="Responsive image">
+                        <h3>Unbelievable returns</h3>
+                        <p>win 10x or 20x prize and ace the leaderboard</p>
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="./img/with.png" class="img-fluid svg" alt="Responsive image">
+                        <h3>Easy withdraw</h3>
+                        <p>You can withdraw anytime or stay and learn more</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="home">
+            <img src="./img/Po.png" alt="img1" class="score" />
+        </section>
+        <section class="mid_section p-5">
+            <div class="container-fluid">
+                <h2 class="text-center mb-4 heading">How we help you learn and invest</h2>
+                <div class="row text-center p-sm-5">
+                    <div class="col-lg-4">
+                        <img src="./img/Low.png" class="img-fluid svg" alt="Responsive image">
+                        <h3>Low investment</h3>
+                        <p>As students invest the minimum amount and get the maximum returns</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="./img/10x.png" class="img-fluid svg" alt="Responsive image">
+                        <h3>10x rewards</h3>
+                        <p>Just with tiny bit of investment leading to maximum rewards</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="./img/implement.png" class="img-fluid svg" alt="Responsive image">
+                        <h3>Learn & implement in real time</h3>
+                        <p>Simplied market tips in a capsule form for you to learn & implement in real time</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="home">
+            <img src="./img/Wit.png" alt="img1" class="score" />
+        </section>
+        <section class="mid_section p-5">
+            <div class="mid1">
+                <div class="headings">
+                    <h2 class="text-center mb-4 heading">We are available 24 X 7 </h2>
+                </div>
+                <div class="help_svg">
+                    <img src="./img/Need.svg" alt="need_help" class="need_svg" />
+                    <img src="./img/Customer.svg" alt="customer" class="customer_svg" />
+                </div>
+            </div>
+        </section>
+        <footer class="footer p-sm-5  p-3">
+            <div class="container-fluid px-sm-5">
+                <div class="logo pt-4 pt-sm-0">
+                    <img src="./img/StockPe.png" class="footer_logo" alt="footer_logo" />
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 pt-4">
+                        <h4>About</h4>
+                        <p class="para">We are simplifying stocks to create a new era of financially educated students
+                            in India.</p>
+                    </div>
+                    <div class="col-lg-3 px-sm-5 pt-4 ">
+                        <h4>Get in touch</h4>
+                        <p class="para">Questions or feedbacks?
+                            We would love to hear from you</p>
+                        <h4>Email us at</h4>
+                        <a href="mailto:Hello@stockpe.tech" class="email" target="_blank">Hello@stockpe.tech</a>
+                    </div>
+                    <div class="col-lg-3 px-sm-5 pt-4  btn_area">
+                        <h4>Get our app</h4>
+                        <a href="#"><img src="./img/button.png" alt="playstore" class="btn_svg" /></a>
+                    </div>
+                    <div class="col-lg-3 pt-4 px-sm-5 social">
+                        <h4>Social Media</h4>
+                        <div>
+                            <a href="#" target="_blank"><img src="./img/facebook.png" alt="facebook"
+                                    class="social_svg" /></a>
+                            <a href="#" target="_blank"><img src="./img/instagram.png" alt="instagram"
+                                    class="social_svg" /></a>
+                            <a href="#" target="_blank"><img src="./img/linkedin.png" alt="linkedin"
+                                    class="social_svg" /></a>
+                        </div>
+                    </div>
+                    <div class="container-fluid pt-5">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <p class="p2">© 2021 StockPe All Rights Reserved.</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p class="p1">A platform by Indians for Indians &#10084;&#65039;</p>
+                            </div>
+                        </div>
+                    </div>
+        </footer>
+    </div>
+    <script>
+        function myFunction() {
+            document.getElementById("myDIV").style.display = "none";
+            document.getElementById("my2").style.display = "block";
+
+        }
+
+        function myFunction2() {
+            var elmnt = document.getElementById("carouselExampleIndicators");
+            elmnt.scrollIntoView();
+        }
+    </script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
+    </script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBHImByi4CCEOewZL0NtZUeduAGlzjqjq8",
+            authDomain: "webstock-99519.firebaseapp.com",
+            databaseURL: "https://webstock-99519-default-rtdb.firebaseio.com/",
+            projectId: "webstock-99519",
+            storageBucket: "webstock-99519.appspot.com",
+            messagingSenderId: "877478933807",
+            appId: "1:877478933807:web:2bc03d8eeef37f2c1dddda"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        var messagesRef = firebase.database()
+            .ref('Collected Data');
+
+        document.getElementById('contactForm')
+            .addEventListener('submit', submitForm);
+
+        function submitForm(e) {
+            e.preventDefault();
+
+            // Get values
+            var phone = getInputVal('inlineFormInputName2');
+
+            saveMessage(phone);
+            document.getElementById('contactForm').reset();
+        }
+
+        // Function to get get form values
+        function getInputVal(id) {
+            return document.getElementById(id).value;
+        }
+
+        // Save message to firebase
+        function saveMessage(phone) {
+            var newMessageRef = messagesRef.push();
+            newMessageRef.set({
+                phone: phone,
+
+            });
+
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
