@@ -66,7 +66,7 @@ span{
 
 
 
-input[type=text] {
+input[type=number] {
   background: linear-gradient(120deg, rgba(26, 48, 65, 0.39) -0.99%, rgba(35, 63, 89, 0.1) 75.38%);
   border: 1px solid #33E6F6;
   box-sizing: border-box;
@@ -161,7 +161,7 @@ ul {
 }
 
 
-input[type=text] {
+input[type=number] {
 background: linear-gradient(120deg, rgba(26, 48, 65, 0.39) -0.99%, rgba(35, 63, 89, 0.1) 75.38%);
 border: 1px solid #33E6F6;
 box-sizing: border-box;
